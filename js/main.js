@@ -3,11 +3,6 @@ if(localStorage.getItem('toDoList') == null){
 }else{
 }
 //toDoList = localStorage.setItem('toDoList', toDoList);
-
-
-
-
-
 $('.table').hide();
 const addBtn = $('#addtask'),
     taskInput =  $('#task'),
@@ -60,7 +55,6 @@ function addValueToOb(){
             delete toDoList['item0'];
         }
         /*changing object keys names, to prevent overwriting*/
-        localStorage.setItem('toDoList', toDoList);
     refreshOutput();
 };
 
