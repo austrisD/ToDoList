@@ -1,0 +1,143 @@
+@import url(restart.css);
+@import url(bootstrap.css);
+
+
+@mixin background {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+@mixin flexInline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}@mixin flexColum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.done_t{
+    text-decoration: line-through var(--danger);
+}
+.ico{
+    width: 30px;
+    height: 30px;
+}
+.del{
+    background-image: url(../ico/trash-alt-solid.svg);
+    @include background();
+    margin: auto;
+}
+.done{
+    background-image: url(../ico/clipboard-check-solid.svg);
+    @include background();
+    margin: auto;
+}
+.btn{
+    white-space: nowrap;
+}
+button:focus {
+    outline: none;
+    border: 5px auto;
+}
+/*elements*/
+
+body{
+    main{
+        @include flexColum();
+        nav{
+            max-width: 768px;
+            width: 100%;
+            @media (max-width: 768px) {
+                width: 100%;
+             };
+            .nav{
+                @include flexInline();
+                justify-content: center;
+            }
+        }
+        .content{
+            @include flexColum();
+            justify-content: center;
+            border: 1px solid rgb(222, 226, 230);
+            border-top: none;
+            width: 100%;
+            max-width: 768px;
+            padding: 20px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            @media (max-width: 768px) {
+                width: 100%;
+            };
+            .output{
+                width: max-content;
+            }
+            .add{
+                @include flexInline();
+                width: max-content;
+                max-width: 400px;
+                margin-bottom: 20px;
+                #task{
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+header, footer,main{
+    display: flex;
+    justify-content: center;
+}
+h3{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.input{
+    border: none;
+    background-color: transparent;
+    width: 100px;
+}
+.px100{
+    width: 124px;
+}
+
+td, th{
+    white-space: nowrap;
+}
+td .form-control{
+    margin-top: -4;
+    margin-bottom: -4;
+}
+.edit134{
+    width: 134px;
+    background-color: red;
+}
+.list-group li{
+    display: list-item;
+    list-style-type: decimal;
+    list-style-position: inside;                        
+}
+.table{
+    width: max-content;
+    @media (max-width: 768px) {
+        width: 100%;
+     };
+}
+#editOutputLoc tr .td {
+    width: 134px;
+    padding: 0;
+    vertical-align: middle;
+    td{
+        padding: 0;
+        padding-left: 10px;
+        vertical-align: middle;
+    }
+    select{
+        margin: 0;
+        padding-left: 0;
+    }
+}
+

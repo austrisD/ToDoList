@@ -1,0 +1,209 @@
+@import url(restart.css);
+@import url(bootstrap.css);
+.done_t {
+  -webkit-text-decoration: line-through var(--danger);
+          text-decoration: line-through var(--danger);
+}
+
+.ico {
+  width: 30px;
+  height: 30px;
+}
+
+.del {
+  background-image: url(../ico/trash-alt-solid.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: auto;
+}
+
+.done {
+  background-image: url(../ico/clipboard-check-solid.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: auto;
+}
+
+.btn {
+  white-space: nowrap;
+}
+
+button:focus {
+  outline: none;
+  border: 5px auto;
+}
+
+/*elements*/
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main nav {
+  max-width: 768px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  body main nav {
+    width: 100%;
+  }
+}
+
+body main nav .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #dee2e6;
+  border-top: none;
+  width: 100%;
+  max-width: 768px;
+  padding: 20px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  body main .content {
+    width: 100%;
+  }
+}
+
+body main .content .output {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+body main .content .add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+body main .content .add #task {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+header, footer, main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h3 {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.input {
+  border: none;
+  background-color: transparent;
+  width: 100px;
+}
+
+.px100 {
+  width: 124px;
+}
+
+td, th {
+  white-space: nowrap;
+}
+
+td .form-control {
+  margin-top: -4;
+  margin-bottom: -4;
+}
+
+.edit134 {
+  width: 134px;
+  background-color: red;
+}
+
+.list-group li {
+  display: list-item;
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+.table {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+@media (max-width: 768px) {
+  .table {
+    width: 100%;
+  }
+}
+
+#editOutputLoc tr .td {
+  width: 134px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+#editOutputLoc tr .td td {
+  padding: 0;
+  padding-left: 10px;
+  vertical-align: middle;
+}
+
+#editOutputLoc tr .td select {
+  margin: 0;
+  padding-left: 0;
+}
+/*# sourceMappingURL=style.css.map */

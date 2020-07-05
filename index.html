@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+    <link rel="manifest" href="ico/site.webmanifest">
+    <link rel="mask-icon" href="ico/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <!--favicon-->
+    <title>Austris to do list</title>
+</head>
+<body>
+    <header>
+        <h1>TO DO LIST</h1>
+    </header>
+    <main>
+        <nav>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <button id="create_list" class="nav-link active">Create list</button>
+                </li>
+                <li class="nav-item">
+                    <button id="editList" class="nav-link">Edit lis</button>
+                </li>
+                <li class="nav-item">
+                    <button id="DownPage" class="nav-link">Download list</button>
+                </li>
+                <li class="nav-item">
+                    <button id="AboutPage" class="nav-link">About</button>
+                </li>
+              </ul>
+        </nav>
+        <section class="content">
+            <div class="add">
+                <select class="form-control" id="taskType">
+                    <option>Do once</option>
+                    <option>EveryDay</option>
+                    <option>Once a week</option>
+                    <option>Once a month</option>
+                    <option>Once a Year</option>
+                    <option>Do do this ever</option>
+                </select>
+                <input class="form-control" id="task" type="text"  placeholder="Task description">
+                <button id="addtask" class="btn btn-dark">Add Task</button>              
+            </div>
+            <div class="output">
+                <div class="pages">
+                <ul class="list-group"></ul>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th class="edit134" scope="col">Type</th>
+                                <th class="px100" scope="col">Task</th>
+                                <th scope="col">Task created</th>
+                                <th scope="col">Done</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                    <tbody id="editOutputLoc"></tbody>
+                </table>
+                </div>
+            </div>
+            <section id="downPage" style="display: none;">
+                <h2>Download page</h2>
+            </section>
+            <section id="aboutPage" style="display: none;">
+                <h2>Made by</h2>
+                <div class="card" style="width: 18rem;">
+                    <img src="ico/profile.JPG" class="card-img-top" alt="austrisprofile">
+                    <div class="card-body">
+                      <h5 class="card-title">Austris Daugulis</h5>
+                      <p class="card-text">Junior web developer</p>
+                      <a href="https://www.linkedin.com/in/austris-daugulis-2646181b1/" class="btn btn-primary">linkedin</a>
+                    </div>
+                  </div>
+            </section>
+        </section >
+    </main>
+    <footer>Austris Daugulis &copy</footer>
+    <script src="js/jquery-3.5.1.js.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
