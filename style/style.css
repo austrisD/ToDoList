@@ -200,6 +200,7 @@ h3 {
 }
 
 .output .taskItem {
+  display: none;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
