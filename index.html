@@ -1,105 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
-    <link rel="manifest" href="ico/site.webmanifest">
-    <link rel="mask-icon" href="ico/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="ico/favicon.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="ico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="ico/site.webmanifest" />
+    <link rel="mask-icon" href="ico/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="ico/favicon.ico" />
     <!--favicon-->
     <title>Austris to do list</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>TO DO LIST<sup style="color: #fff;font-size: 10px;">BETA version</sup></h1>
+      <h1>
+        TO DO LIST<sup style="color: #fff; font-size: 10px;">BETA version</sup>
+      </h1>
     </header>
     <main>
-        <nav>
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <button id="create_list" class="nav-link active">Create list</button>
-                </li>
-                <li class="nav-item">
-                    <button id="editList" class="nav-link">Edit lis</button>
-                </li>
-                <li class="nav-item">
-                    <button id="DownPage" class="nav-link">Download list</button>
-                </li>
-                <li class="nav-item">
-                    <button id="AboutPage" class="nav-link">About</button>
-                </li>
-            </ul>
-        </nav>
-        <section class="content">
-            <div class="add">
-                <select class="form-control" id="taskType">
-                    <option>Do once</option>
-                    <option>EveryDay</option>
-                    <option>Once a week</option>
-                    <option>Once a month</option>
-                    <option>Once a Year</option>
-                    <option>Do do this ever</option>
-                </select>
-                <input class="form-control" id="task" type="text" placeholder="Task description" maxlength="30">
-                <button id="addtask" class="btn btn-dark">Add Task</button>
+      <nav>
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <button id="create_list" class="nav-link active">
+              Create list
+            </button>
+          </li>
+          <li class="nav-item">
+            <button id="editList" class="nav-link">Edit lis</button>
+          </li>
+          <li class="nav-item">
+            <button id="DownPage" class="nav-link">Download list</button>
+          </li>
+          <li class="nav-item">
+            <button id="AboutPage" class="nav-link">About</button>
+          </li>
+        </ul>
+      </nav>
+      <section class="content">
+        <div class="add">
+          <select class="form-control" id="taskType">
+            <option>Do once</option>
+            <option>EveryDay</option>
+            <option>Once a week</option>
+            <option>Once a month</option>
+            <option>Once a Year</option>
+            <option>Do do this ever</option>
+          </select>
+          <input
+            class="form-control"
+            id="task"
+            type="text"
+            placeholder="Task description"
+            maxlength="30"
+          />
+          <button id="addtask" class="btn btn-dark">Add Task</button>
+        </div>
+        <div class="output"></div>
+        <section class="donwPage" id="downPage" style="display: none;">
+          <div class="btn_panel">
+            <button id="downloadList" class="btn btn-dark">
+              Download list
+            </button>
+            <div class="upload">
+              <label class="btn btn-dark">
+                Browse <input type="file" id="selectFiles" hidden />
+              </label>
+              <button id="import" class="btn btn-dark">Import</button>
             </div>
-            <div class="output" ></div>
-            <section class="donwPage" id="downPage" style="display: none;">
-                <div class="btn_panel">
-                    <button  id="downloadList" class="btn btn-dark">Download list</button>
-                    <div class="upload">
-                        <label class="btn btn-dark">
-                            Browse <input  type="file" id="selectFiles" hidden/>
-                        </label>
-                        <button id="import" class="btn btn-dark">Import</button>
-                    </div>
-                </div>
-                <div class="outputContainer">
-                    <h3 class="noItem">Item is not selected</h3>
-                </div>
-            </section>
-            <section class="aboutPage" id="aboutPage" style="display: none;">
-                <div class="card">
-                    <div class="card-header bg-light ">This app  made by </div>
-                    <img src="ico/profile.webp" class="card-img-top" alt="austrisprofile">
-                    <div class="card-body">
-                        <h5 class="card-title">Austris Daugulis</h5>
-                        <p class="card-text">Junior web developer
-                        </p>
-                        <a href="https://www.linkedin.com/in/austris-daugulis-2646181b1/"
-                            class="btn btn-primary">linkedin</a>
-                    </div>
-                </div>
-                We all have had that time in or life, there are no pen and paper near hands. But like any other modern person, we all have one or more devices near us. With this applications can create tasks we need to do, shopping list, anything you can imagine.<br>
-                    At first, this Web-based software was created for programing training purposes. But at the end by adding more features it becomes aperient it cam by something more. Just kidding.<br>
-                    This application can add tasks, delete them, sign ass accomplished, change the frequency of each task. Unlike other web-based applications, this one's main goal was easy to use on all platforms. In that idea in mind, the list has two view modes, one for mobile one for devices with larger screen.<br>Despite modern trends to gather as much information about users as possible, this web app doesn't collect any information. For example, all information you add in form ass tasks is stored locally. Also, all data can be downloaded and stored on your device. However if you clean devices memory with applications like CCleaner, all saved data <span>Will By lost<span><br>Despite this app was made for portfolio more features will be added in the future.
-                    Ability to give a color each task, downloading and sending codec list to others.<br>Finlay I writing about pages ending. I am surprised someone is still reading something so meninges. This text was whitened only because Google requires more than 2000 words on-page for SEO. If you are still here you deserve a beer. And I am out of ideas still short 1700 words.
-                    <p>Header background will by in Netflix "Avif" file format which is jus 37.9kb large, jpeg was 117kb.Also i tested googles "Webp", its was 103kb</p>
-            </section>
+          </div>
+          <div class="outputContainer">
+            <h3 class="noItem">Item is not selected</h3>
+          </div>
         </section>
+        <section class="aboutPage" id="aboutPage" style="display: none;">
+          <div class="card">
+            <div class="card-header bg-light">This app made by</div>
+            <img
+              src="ico/profile.webp"
+              class="card-img-top"
+              alt="austrisprofile"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Austris Daugulis</h5>
+              <p class="card-text">Junior web developer</p>
+              <a
+                href="https://www.linkedin.com/in/austris-daugulis-2646181b1/"
+                class="btn btn-primary"
+                >linkedin</a
+              >
+            </div>
+          </div>
+          We all have had that time in our life, there are no pen and paper near
+          hands. But like a modern person, we all have a device with us. With
+          this application, create tasks we need to do, shopping list, anything
+          you can imagine. At first, this Web-based software was created for
+          programing training purposes. But at the end by adding more features
+          it becomes apparent it can by something different.<br />
+          This application can add tasks, delete them, sign as accomplished,
+          change the frequency of each task. Unlike other web-based
+          applications, this one’s primary goal was easy to use on all
+          platforms. In that in mind, the list has two view modes, one for
+          mobile, one for devices with a larger screen.<br />
+          Despite modern trends to gather as much information about users as
+          possible, this web app doesn’t collect any information. For example,
+          all information you add in form as tasks are stored locally. Also, all
+          data can be downloaded and stored on your device. However if you clean
+          devices memory with applications like CCleaner,
+          <span>all saved data Will By lost</span> Despite this app was made for
+          portfolio. I will add more features in the future. Ability to give a
+          color each task, downloading and sending codec list to others.<br />
+          Header background will by in Netflix “Avif” file format which is jus
+          37.9kb large, jpeg was 117kb.Also i tested googles “Webp”, its was
+          103kb
+        </section>
+      </section>
     </main>
     <footer>Austris Daugulis &copy</footer>
     <div class="overlay">
-        <div class="warningEmpty">
-            <h3>Warning</h3>
-            <p>Don't leave task field empty</p>
-            <button id="cancel" class="btn btn-dark">Continue</button>
-        </div>
+      <div class="warningEmpty">
+        <h3>Warning</h3>
+        <p>Don't leave task field empty</p>
+        <button id="cancel" class="btn btn-dark">Continue</button>
+      </div>
     </div>
     <div class="overlayDown">
-        <div class="warningEmpty">
-            <h3>Warning</h3>
-            <p>If you import this list you lose curet list!!!</p>
-            <button id="cancelImport" class="btn btn-dark">Cancel</button>
-            <button id="continueImport" class="btn btn-dark">Continue</button>
-        </div>
+      <div class="warningEmpty">
+        <h3>Warning</h3>
+        <p>If you import this list you lose curet list!!!</p>
+        <button id="cancelImport" class="btn btn-dark">Cancel</button>
+        <button id="continueImport" class="btn btn-dark">Continue</button>
+      </div>
     </div>
     <script src="js/jquery-3.5.1.js.js"></script>
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
